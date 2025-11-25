@@ -296,7 +296,7 @@ const Resume = () => {
             <h3>다양한 서비스 도메인 및 대규모 도입 경험</h3>
             <ul>
               <li>B2B·B2C·B2G 서비스를 모두 경험하며, 각 비즈니스 모델에 맞는 UX·기능 구조를 설계합니다.</li>
-              <li>세종시 교육청 7,906대 규모 도입 경험이 있습니다.</li>
+              <li>세종시 교육청 10,000대 규모 도입 경험이 있습니다.</li>
             </ul>
           </motion.div>
         </div>
@@ -342,7 +342,7 @@ const Resume = () => {
                   <li>CoreML 기반 YOLO 모델 연동 및 전처리, 후처리 로직 설계</li>
                   <li>Vision 기반 이미지 → 텍스트 추출(OCR) 파이프라인 구성</li>
                   <li>SwiftUI + Clean Architecture 기반 신규 화면 및 로직 개발</li>
-                  <li>세종시 교육청 iPad 7,906대 도입 확정 프로젝트 담당</li>
+                  <li>세종시 교육청 iPad 10,000대 도입 확정 프로젝트 담당</li>
                 </ul>
               </div>
             </div>
