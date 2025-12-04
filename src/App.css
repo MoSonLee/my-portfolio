@@ -19,3 +19,49 @@
   }
 }
 
+/* A4 세로 방향 설정 */
+@page {
+  size: A3 portrait;
+}
+
+/* 프린트용 스타일 */
+@media print {
+  /* 카드에 깔린 하이라이트 레이어 없애기 */
+  .resume-card::before {
+    display: none !important;
+  }
+
+  /* Tech Stack 행의 반투명 배경 + 그림자 제거 */
+  .tech-category {
+    background: transparent !important;
+    border-left: none !important;
+    box-shadow: none !important;
+  }
+
+  /* 스킬 뱃지도 단순하게 – 그라디언트/그림자 제거 */
+  .skill-badge {
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 20px;
+    border: 1px solid #667eea !important;  /* 은은한 테두리만 남기기 */
+  }
+
+  /* 필요하면 프로젝트 태그 쪽도 같은 느낌으로 정리 */
+  .project-tech span {
+    background: none !important;
+    box-shadow: none !important;
+    border: 1px solid rgba(118, 75, 162, 0.7) !important;
+  }
+}
+@media print {
+  /* 전역적으로 box-shadow 제거 */
+  * {
+    box-shadow: none !important;
+  }
+
+  /* 필요하면 카드 배경도 단색으로 */
+  .resume-card {
+    background-image: none !important;
+    background-color: #0b1020 !important;  /* 또는 #ffffff */
+  }
+}

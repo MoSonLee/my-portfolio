@@ -1524,3 +1524,53 @@
   pointer-events: auto !important;
 }
 
+/* ===========================
+   PRINT 전용 설정 (PDF용)
+   =========================== */
+   @page {
+    /* A4 세로방향 + 여백 */
+    size: A4 portrait;
+    margin: 12mm;
+  }
+  
+  @media print {
+    html, body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      background: #000; /* 다크 배경 유지하고 싶으면 */
+    }
+  
+    /* 카드(섹션) 단위로 페이지 안에서 쪼개지지 않게 */
+    .resume-card,
+    .experience-item,
+    .project-item,
+    .introduce-item,
+    .interesting-item,
+    .timeline-item,
+    .ability-section-bg,
+    .project-screenshot-item,
+    .project-detail-card,
+    .tech-category {
+      page-break-inside: avoid;    /* 구 브라우저용 */
+      break-inside: avoid-page;    /* 최신 스펙 */
+    }
+  
+    /* 카드 사이 여백 조금 더 확보 (페이지 경계에 딱 붙는 것 방지) */
+    .resume-card {
+      margin-bottom: 12mm;
+    }
+  
+    /* 헤더는 첫 페이지 상단에 붙이고, 중간에 잘리지 않게 */
+    .resume-header {
+      page-break-inside: avoid;
+      break-inside: avoid-page;
+      page-break-after: avoid;
+      break-after: avoid-page;
+    }
+  
+    /* 모달은 인쇄 안 되게 */
+    .project-modal-overlay {
+      display: none !important;
+    }
+  }
+  
